@@ -8,9 +8,6 @@
         "48": "icon48.png",
         "16": "icon16.png"
     },
-    "action": {
-        "default_popup": "popup.html"
-    },
     "content_scripts": [
         {
             "matches": [

@@ -35,5 +35,7 @@ function data(action, new_data) {
             data.sent_affiliates = data.sent_affiliates.concat(new_data.sent_affiliates)
             localStorage.setItem(name, JSON.stringify(data))
                 ; break
+        case `reset`:
+            localStorage.removeItem(name)
     }
 }
