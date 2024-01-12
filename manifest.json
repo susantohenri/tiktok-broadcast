@@ -17,6 +17,7 @@
                 "https://affiliate.tiktok.com/connection/creator?shop_region=ID"
             ],
             "js": [
+                "jquery-3.7.1.slim.min.js",
                 "affiliate-list.js"
             ]
         },
@@ -25,8 +26,12 @@
                 "https://affiliate.tiktok.com/seller/im?shop_id=*"
             ],
             "js": [
+                "jquery-3.7.1.slim.min.js",
                 "affiliate-detail.js"
             ]
         }
-    ]
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
 }
