@@ -17,7 +17,15 @@
                 "https://affiliate.tiktok.com/connection/creator?shop_region=ID"
             ],
             "js": [
-                "scripts/content.js"
+                "affiliate-list.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://affiliate.tiktok.com/seller/im?shop_id=*"
+            ],
+            "js": [
+                "affiliate-detail.js"
             ]
         }
     ]
