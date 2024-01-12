@@ -4,7 +4,7 @@ waitForMe(`.bg-neutral-bg4.p-24`, () => {
         <textarea id="message" rows="5" cols="100" style="border: 1px solid black; padding: 5px" placeholder="Tulis Pesan Disini"></textarea>
         <br>
         <button id="send_message" style="border: 1px solid black; padding: 5px">Kirim Pesan</button>
-        <button id="reset_message" style="border: 1px solid black; padding: 5px">Reset</button>
+        <button id="reset_message" style="border: 1px solid black; padding: 5px">Reset Pengiriman Pesan</button>
         <br><br>
         <div id="sent_affiliates"></div>
     `
@@ -65,8 +65,8 @@ function showLastCondition() {
 }
 
 function sendMessage() {
-    const { sent_affiliates } = data(`get`)
-    jQuery(`div.arco-table-body table tr`).each(function () {
+    const { message, sent_affiliates } = data(`get`)
+    if (`` !== message) jQuery(`div.arco-table-body table tr`).each(function () {
         const tr = jQuery(this)
         const uname = tr.find(`.text-body-m-medium.text-neutral-text1.text-overflow-single`).text()
         if (0 > sent_affiliates.indexOf(uname)) {

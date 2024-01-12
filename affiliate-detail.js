@@ -5,6 +5,14 @@ function waitForMe(selector, cb) {
     }, 500)
 }
 
+waitForMe(`.text-body-m-medium.text-neutral-text1`, () => {
+    jQuery(`.text-body-m-medium.text-neutral-text1:contains("Indonesia")`)
+        .after(`<button id="stop_message" style="padding: 1px 5px;float: right;background: red;color: white;font-weight: bold;">Hentikan Pengiriman Pesan!</button>`)
+    jQuery(`#stop_message`).click(() => {
+        data(`set`, { message: `` })
+    })
+})
+
 waitForMe(`[placeholder="Kirim pesan"]`, async () => {
     const { message } = data(`get`)
     document.querySelector(`[placeholder="Kirim pesan"]`).value = message
