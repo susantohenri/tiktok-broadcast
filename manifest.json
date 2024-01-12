@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Tiktok Broadcast",
+    "version": "1.0",
+    "description": "Broadcast Message to Tiktok Affiliates",
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://affiliate.tiktok.com/connection/creator?shop_region=ID"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ]
+}
